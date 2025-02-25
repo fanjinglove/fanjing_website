@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刘帅 | 软件工程314</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet"> <!-- 赛博朋克字体 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- FontAwesome 图标 -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #1b1b1b, #3e3e3e);
+            color: #fff;
+            height: 100%;
+        }
+
+        /* 背景动态效果 */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 152%;
+            background: url('01.jpg') ;
+            background-size: cover
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* 标头部分 */
+        header {
+            position: relative;
+            padding: 120px 20px;
+            text-align: center;
+            z-index: 10;
+        }
+        header h1 {
+            font-size: 4em;
+            color: #ff0080;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080, 0 0 45px #ff0080;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #00f4d8;
+            margin-top: 10px;
+            text-shadow: 0 0 10px #00f4d8;
+        }
+
+        /* 内容区 */
+        .content {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 0, 128, 0.7), 0 0 50px rgba(0, 255, 216, 0.7);
+        }
+
+        .card h2 {
+            font-size: 2.2em;
+            color: #ff0080;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080;
+        }
+
+        .card p, .card ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 30px;
+            left: 50%;
+            position: absolute;
+            z-index: 9999;
+        }
+        .social-links a {
+            margin: 0 15px;
+            font-size: 2em;
+            color: #00f4d8;
+            text-shadow: 0 0 5px #00f4d8, 0 0 10px #00f4d8;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #ff0080;
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: #aaa;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 1em;
+        }
+
+        /* 自适应设计 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 背景动态效果 -->
+<div class="background"></div>
+
+<!-- 头部 -->
+<header>
+    <h1>刘帅</h1>
+    <p>软件工程314 | 202331409</p>
+</header>
+
+<!-- 主内容 -->
+<div class="content">
+    <!-- 个人简介 -->
+    <div class="card">
+        <h2>关于我</h2>
+        <p>大家好，我是刘帅，一名热爱编程的学生。我专注于现代前端技术，如 HTML、CSS和JavaScript都有涉猎。我的目标是创造出色的用户体验，并持续探索前端开发的新技术。</p>
+    </div>
+
+    <!-- 联系信息 -->
+    <div class="card">
+        <h2>联系我</h2>
+        <p><strong>邮箱：</strong>2607725608@qq.com</p>
+        <p><strong>电话：</strong>+86 15239237699</p>
+    </div>
+
+    <!-- 技能 -->
+    <div class="card">
+        <h2>技能</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>3d建模, c语言, java</li>
+            <li>python, pyqt, 鸿蒙</li>
+        </ul>
+    </div>
+
+    <!-- 经验 -->
+    <div class="card">
+        <h2>经验</h2>
+        <ul>
+            <li><strong>参加匠心杯3d建模比赛</strong> - 2024</li>
+            <li><strong>上过java和c语言的实验课</strong> - 2023-2024</li>
+        </ul>
+    </div>
+
+    <!-- 社交链接 -->
+    <div class="social-links">
+        <a href="https://github.com/fanjinglove" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+<!-- 底部 -->
+<footer>
+    <p>&copy; 2025 刘帅 | 所有权保留</p>
+</footer>
+
+</body>
+</html>
